@@ -11,11 +11,9 @@ require(["gitbook"], function(gitbook) {
             }
             if (event.data && fullTicketId) {
                 // 登录成功，清除定时器，不做其它操作
-                clearInterval(timer);
             } else if (event.data && event.data.check ) {
                 // 登录失败，需要重定向至登录页面
                 window.location.href="/#login";
-                clearInterval(timer);
             }
         }, false);
         window.__LISTENING_LOGIN_MESSAGE__ = true;
